@@ -66,5 +66,5 @@ void test_terminal_size(int lign_end, int cols_end)
             clear();
             cols_end = COLS;
             lign_end = LINES;
-        }
+    }
 }
