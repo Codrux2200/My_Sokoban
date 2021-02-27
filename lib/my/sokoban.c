@@ -19,9 +19,10 @@ char *read_map(char *filepath)
     int fd = open(filepath, O_RDONLY);
 
     stat(filepath, &sb);
-    buffer = malloc((sb.st_size + 1) * sizeof(char *));
+    buffer = malloc((sb.st_size + 2) * sizeof(char));
     read(fd, buffer, sb.st_size);
     buffer[sb.st_size] = '\n';
+    buffer[sb.st_size + 1] = '\0';
     return buffer;
 }
 

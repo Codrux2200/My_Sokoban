@@ -43,8 +43,8 @@ int count_game(char *map, int p, int o, int x)
 void sokoban_game(char *map, int x, int o, int big_line)
 {
     sokoban soko_o[o], soko_x[x], soko_p[2];
-    char **map_tab = malloc((my_strlen(map) + 1)* sizeof(char **));
-    char *line = malloc(big_line * sizeof(char *));
+    char **map_tab = malloc((my_strlen(map) + 1)* sizeof(char *));
+    char *line = malloc(big_line * sizeof(char));
 
     for (int i = 0, s = 0, x = 0, o = 0, l = 0; map[i] != '\0'; i++) {
         if (map[i] == '#' || map[i] == ' ')
