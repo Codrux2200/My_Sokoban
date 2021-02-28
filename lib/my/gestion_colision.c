@@ -52,8 +52,8 @@ sokoban *soko_p)
         for (int i = 0; i < soko_x[0].pos[2]; i++){
             if (soko_x[i].pos[0] + 1 == soko_p->pos[0] &&
             soko_x[i].pos[1] == soko_p->pos[1]){
-                if (test_colistion2(define, map_tab,
-                &soko_x[i], soko_p) == 1)
+                if (test_colistion2(define, map_tab, &soko_x[i], soko_p) == 1 &&
+                test_x_to_x_colision(soko_x, i, define) == 1)
                     soko_x[i].pos[0] -= 1;
                 else
                     soko_p->pos[0] = soko_x[i].pos[0] + 2;

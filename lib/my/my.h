@@ -48,6 +48,7 @@ void print_map(char **map_tab, sokoban soko_p);
 void sokoban_game(char *map, int x, int o, int big_line);
 int test_colistion2(int define, char **map_tab, sokoban *soko_x,
 sokoban *soko_p);
+int test_x_to_x_colision(sokoban *soko_x, int i, int define);
 void test_x_colision_reduce2(int define , char **map_tab,
 sokoban *soko_x, sokoban *soko_p);
 void test_x_colision_reduce3(int define , char **map_tab,

@@ -27,7 +27,8 @@ void p_soko_gestion(sokoban *soko_p, int s, int l)
 
 char *map_save(char *map, int conv)
 {
-    static char *map_save;
+    static char *map_save = NULL;
+
     if (conv == 0){
         map_save = map;
         return " ";
