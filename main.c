@@ -74,7 +74,7 @@ int suite(char **map_tab, sokoban *soko_o, sokoban *soko_x, sokoban *soko_p)
     keypad(stdscr, TRUE);
     curs_set(FALSE);
     while (test_final_game(soko_o, soko_x) == 0){
-        check_defeat(soko_x, map_tab);
+        check_defeat(soko_x, map_tab, soko_o);
         test_terminal_size(lign_end, cols_end);
         print_map(map_tab, soko_p[1]);
         print_elements(soko_o, soko_p, soko_x);

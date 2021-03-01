@@ -36,8 +36,13 @@ char *map_save(char *map, int conv)
         return map_save;
 }
 
-void defeat(char **map_tab)
+int defeat(char **map_tab, sokoban *soko_x, sokoban *soko_o)
 {
+    for (int i = 0; i < soko_o[0].pos[2]; i++){
+        if (soko_o[i].pos[0] == soko_x->pos[0] &&
+        soko_o[i].pos[1] == soko_x->pos[1])
+            return 0;
+    }
     endwin();
     free(map_tab);
     my_putstr("you loose ;(\n");

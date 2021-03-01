@@ -25,7 +25,6 @@ int l_gestion(int l, int s, char *line, char **map_tab);
 int s_plus_function(char *line, int s);
 void free_assemble(char *map, char *line);
 int mini_function_s(char *map, char *line, int s, int i);
-void defeat(char **map_tab);
 typedef struct sokoban sokoban;
 struct sokoban{
     int pos[4];
@@ -34,6 +33,7 @@ typedef struct map_stock map_stock;
 struct map_stock{
     char *map;
 };
+int defeat(char **map_tab, sokoban *soko_x, sokoban *soko_o);
 void p_soko_gestion(sokoban *soko_p, int s, int l);
 void copie(sokoban *soko_p, int s, int l);
 void test_x_colision_reduce(int define , char **map_tab, sokoban *soko_x,
@@ -53,7 +53,7 @@ void test_x_colision_reduce2(int define , char **map_tab,
 sokoban *soko_x, sokoban *soko_p);
 void test_x_colision_reduce3(int define , char **map_tab,
 sokoban *soko_x, sokoban *soko_p);
-void check_defeat(sokoban *soko_x, char **map_tab);
+void check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o);
 void gestion_print_elements(sokoban *soko_o, sokoban *soko_x,
 sokoban *soko_p, char **map_tab);
 int test_colistion(int define, char **map_tab, sokoban *soko_x,
