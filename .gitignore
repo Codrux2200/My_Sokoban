@@ -3,4 +3,4 @@ map
 sokoban
 NormEZ*
 map2
-./maps
+./maps/*
