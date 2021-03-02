@@ -24,7 +24,7 @@ void check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o)
     }
 }
 
-void print_describe()
+void print_describe(void)
 {
     my_putstr("USAGE\n");
     my_putstr("    ./my_sokoban map\n");

@@ -25,7 +25,7 @@ int l_gestion(int l, int s, char *line, char **map_tab);
 int s_plus_function(char *line, int s);
 void free_assemble(char *map, char *line);
 int mini_function_s(char *map, char *line, int s, int i);
-void print_describe();
+void print_describe(void);
 void error_map_check(char c, char *map);
 typedef struct sokoban sokoban;
 struct sokoban{

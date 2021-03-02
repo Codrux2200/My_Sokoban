@@ -65,7 +65,8 @@ int test_x_to_x_colision(sokoban *soko_x, int i, int define)
             if (soko_x[i].pos[0] - 1 == soko_x[s].pos[0] &&
             soko_x[i].pos[1] == soko_x[s].pos[1])
                 return 0;
-        } else if (define == 1){
+        }
+        if (define == 1){
             if (soko_x[i].pos[0] + 1 == soko_x[s].pos[0] &&
             soko_x[i].pos[1] == soko_x[s].pos[1])
                 return 0;
