@@ -8,8 +8,7 @@
 
 void check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o)
 {
-
-    for (int i = 0; i < soko_x[0].pos[2]; i++){
+   for (int i = 0; i < soko_x[0].pos[2]; i++){
       if (map_tab[soko_x[i].pos[1]][soko_x[i].pos[0] - 1] == '#' &&
       map_tab[soko_x[i].pos[1] + 1][soko_x[i].pos[0]] == '#')
          defeat(map_tab, &soko_x[i], soko_o);
