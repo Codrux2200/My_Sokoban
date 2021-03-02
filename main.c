@@ -8,12 +8,18 @@
 
 int main(int ac, char **av)
 {
-    char *map = read_map(av[1]);
-    if (count_game(map, 0, 0, 0) == 84) {
-        my_putstr_err("ERROR MAP\n");
-        return 84;
-    }
-    WINDOW *page;
+    if (ac == 1)
+        return 2;
+        if (av[1][0] == '-' && av[1][1] == 'h')
+            print_describe();
+        else {
+        char *map = read_map(av[1]);
+        if (count_game(map, 0, 0, 0) == 84) {
+            my_putstr_err("ERROR MAP\n");
+            return 84;
+        }
+        WINDOW *page;
+        }
 }
 
 int count_game(char *map, int p, int o, int x)
@@ -82,7 +88,6 @@ int suite(char **map_tab, sokoban *soko_o, sokoban *soko_x, sokoban *soko_p)
     }
     free(map_tab);
     endwin();
-    my_putstr("you win\n");
     exit(0);
 }
 

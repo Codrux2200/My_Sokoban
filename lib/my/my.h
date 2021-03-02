@@ -25,6 +25,7 @@ int l_gestion(int l, int s, char *line, char **map_tab);
 int s_plus_function(char *line, int s);
 void free_assemble(char *map, char *line);
 int mini_function_s(char *map, char *line, int s, int i);
+void print_describe();
 typedef struct sokoban sokoban;
 struct sokoban{
     int pos[4];

@@ -45,6 +45,5 @@ int defeat(char **map_tab, sokoban *soko_x, sokoban *soko_o)
     }
     endwin();
     free(map_tab);
-    my_putstr("you loose ;(\n");
     exit(1);
 }
