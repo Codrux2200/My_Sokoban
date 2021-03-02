@@ -9,7 +9,7 @@
 int main(int ac, char **av)
 {
     if (ac == 1)
-        return 2;
+        return 84;
         if (av[1][0] == '-' && av[1][1] == 'h')
             print_describe();
         else {
@@ -29,6 +29,7 @@ int count_game(char *map, int p, int o, int x)
     int i = 0;
 
     for (i = 0; map[i] != '\0'; i++){
+        error_map_check(map[i], map);
         if (map[i] == 'P')
             p++;
         else if (map[i] == 'X')

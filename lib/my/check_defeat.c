@@ -27,10 +27,20 @@ void check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o)
 void print_describe()
 {
     my_putstr("USAGE\n");
-    my_putstr("\t./my_sokoban map\n");
+    my_putstr("    ./my_sokoban map\n");
     my_putstr("DESCRIPTION\n");
-    my_putstr("\tmap file representing the warehouse map, containing");
+    my_putstr("    map file representing the warehouse map, containing");
     my_putstr("‘#’ for walls,\n");
-    my_putstr("\t    ‘P’ for the player, ‘X’ for boxes and");
+    my_putstr("        ‘P’ for the player, ‘X’ for boxes and");
     my_putstr("‘O’ for storage locations.\n");
+}
+
+void error_map_check(char c, char *map)
+{
+   if (c != 'P' && c != 'O' && c != 'X' && c != '#'
+   && c != '\n' && c != ' '){
+      my_putstr_err("ERROR MAP\n");
+      free(map);
+      exit(84);
+   }
 }
