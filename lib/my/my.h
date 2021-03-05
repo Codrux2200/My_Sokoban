@@ -15,6 +15,7 @@
 #include <ncurses.h>
 #include <unistd.h>
 char *read_map(char *filepath);
+int l_save(int l, int state);
 int count_game(char *map, int p, int o, int x);
 void my_putstr_err(char *str);
 int my_strlen(char *str);

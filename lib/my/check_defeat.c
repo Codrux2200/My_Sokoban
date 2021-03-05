@@ -48,3 +48,13 @@ void error_map_check(char c, char *map)
         exit(84);
     }
 }
+
+int l_save(int l, int state)
+{
+    static int la = 0;
+
+    if (state == 1)
+        la = l;
+    return la;
+
+}

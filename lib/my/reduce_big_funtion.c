@@ -34,6 +34,7 @@ int l_gestion(int l, int s, char *line, char **map_tab)
     line[s] = '\0';
     map_tab[l] = line;
     l++;
+    l_save(l, 1);
     return l;
 }
 

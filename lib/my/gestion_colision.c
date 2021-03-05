@@ -20,11 +20,13 @@ int test_colistion(int define, char **map_tab, sokoban *soko_x, sokoban *soko_p)
                 return 0;
             break;
         case 2:
-            if (map_tab[soko_p->pos[1] + 1][soko_p->pos[0]] == '#')
+            if (map_tab[soko_p->pos[1] + 1][soko_p->pos[0]] == '#'
+            || soko_p->pos[1] + 1 == l_save(0, 0) - 1)
                 return 0;
             break;
         case -2:
-            if (map_tab[soko_p->pos[1] - 1][soko_p->pos[0]] == '#')
+            if (map_tab[soko_p->pos[1] - 1][soko_p->pos[0]] == '#'
+            || soko_p->pos[1] - 1 == 0)
                 return 0;
             break;
     }
@@ -44,11 +46,13 @@ sokoban *soko_p)
                 return 0;
             break;
         case 2:
-            if (map_tab[soko_x->pos[1] + 1][soko_x->pos[0]] == '#')
+            if (map_tab[soko_x->pos[1] + 1][soko_x->pos[0]] == '#'
+            || soko_x->pos[1] + 1 == l_save(0, 0) - 1)
                 return 0;
             break;
         case -2:
-            if (map_tab[soko_x->pos[1] - 1][soko_x->pos[0]] == '#')
+            if (map_tab[soko_x->pos[1] - 1][soko_x->pos[0]] == '#'
+            || soko_x->pos[1] - 1 == 0)
                 return 0;
             break;
     }
