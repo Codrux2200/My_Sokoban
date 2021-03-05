@@ -9,5 +9,6 @@
 void my_putstr(char *str)
 {
     int lenth = my_strlen(str);
+
     write (1, str, lenth);
 }
