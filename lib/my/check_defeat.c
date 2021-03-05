@@ -56,5 +56,4 @@ int l_save(int l, int state)
     if (state == 1)
         la = l;
     return la;
-
 }
