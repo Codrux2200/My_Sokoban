@@ -88,9 +88,10 @@ int test_final_game(sokoban *soko_o, sokoban *soko_x)
                 count++;
         }
     }
-    if (count == soko_x[0].pos[2])
+    if (count == soko_x[0].pos[2]){
+        ungetch('a');
         win = 1;
-    else
+    } else
         win = 0;
     return win;
 }

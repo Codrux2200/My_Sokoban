@@ -43,7 +43,6 @@ int defeat(char **map_tab, sokoban *soko_x, sokoban *soko_o)
         soko_o[i].pos[1] == soko_x->pos[1])
             return 0;
     }
-    endwin();
-    free(map_tab);
-    exit(1);
+    ungetch('a');
+    return (2);
 }

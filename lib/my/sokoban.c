@@ -49,6 +49,8 @@ sokoban *soko_p, char **map_tab)
         case 32:
             count_game(map_save("\0", 1), 0, 0, 0);
             break;
+        case 'a':
+            break;
     }
 }
 
