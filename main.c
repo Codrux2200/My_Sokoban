@@ -89,7 +89,7 @@ int suite(char **map_tab, sokoban *soko_o, sokoban *soko_x, sokoban *soko_p)
         print_elements(soko_o, soko_p, soko_x);
         if (test_final_game(soko_o, soko_x) == 1)
             end = 1;
-        if (check_defeat(soko_x, map_tab, soko_o) == 2)
+        if (check_defeat(soko_x, map_tab, soko_o, 0) == 2)
             end = 2;
         gestion_print_elements(soko_o, soko_x, &soko_p[0], map_tab);
     }

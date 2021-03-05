@@ -6,23 +6,26 @@
 */
 #include "my.h"
 
-int check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o)
+int check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o, int nbr)
 {
     for (int i = 0; i < soko_x[0].pos[2]; i++){
         if (map_tab[soko_x[i].pos[1]][soko_x[i].pos[0] - 1] == '#' &&
         map_tab[soko_x[i].pos[1] + 1][soko_x[i].pos[0]] == '#')
-            return (defeat(map_tab, soko_x, soko_o));
+            nbr++;
         if (map_tab[soko_x[i].pos[1]][soko_x[i].pos[0] + 1] == '#' &&
         map_tab[soko_x[i].pos[1] - 1][soko_x[i].pos[0]] == '#')
-            return (defeat(map_tab, soko_x, soko_o));
+            nbr++;
         if (map_tab[soko_x[i].pos[1]][soko_x[i].pos[0] + 1] == '#' &&
         map_tab[soko_x[i].pos[1] + 1][soko_x[i].pos[0]] == '#')
-            return (defeat(map_tab, soko_x, soko_o));
+            nbr++;
         if (map_tab[soko_x[i].pos[1]][soko_x[i].pos[0] - 1] == '#' &&
         map_tab[soko_x[i].pos[1] - 1][soko_x[i].pos[0]] == '#')
-            return (defeat(map_tab, soko_x, soko_o));
+            nbr++;
     }
-    return 0;
+    if (nbr == soko_x[0].pos[2])
+        return (defeat(map_tab, soko_x, soko_o));
+    else
+        return 0;
 }
 
 void print_describe(void)

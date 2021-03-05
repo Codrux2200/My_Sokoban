@@ -55,7 +55,7 @@ void test_x_colision_reduce2(int define , char **map_tab,
 sokoban *soko_x, sokoban *soko_p);
 void test_x_colision_reduce3(int define , char **map_tab,
 sokoban *soko_x, sokoban *soko_p);
-int check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o);
+int check_defeat(sokoban *soko_x, char **map_tab, sokoban *soko_o, int nbr);
 void gestion_print_elements(sokoban *soko_o, sokoban *soko_x,
 sokoban *soko_p, char **map_tab);
 int test_colistion(int define, char **map_tab, sokoban *soko_x,
