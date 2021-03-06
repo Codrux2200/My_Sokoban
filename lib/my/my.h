@@ -28,6 +28,7 @@ void free_assemble(char *map, char *line);
 int mini_function_s(char *map, char *line, int s, int i);
 void print_describe(void);
 void error_map_check(char c, char *map);
+void function_error(char *map, int p, int x, int o);
 typedef struct sokoban sokoban;
 struct sokoban{
     int pos[4];

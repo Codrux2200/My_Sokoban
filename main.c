@@ -26,9 +26,7 @@ int main(int ac, char **av)
 
 int count_game(char *map, int p, int o, int x)
 {
-    int big_line = 0;
-    int line = 0;
-    int size = my_strlen(map);
+    int big_line , line = 0;
 
     for (int i = 0; map[i] != '\0'; i++){
         error_map_check(map[i], map);
@@ -48,14 +46,7 @@ int count_game(char *map, int p, int o, int x)
         } else
             line++;
     }
-    for (int i = size - 2; map[i] != '\n'; i--){
-        if (map[i] == 'X'){
-            my_putstr_err("error map\n");
-            exit(84);
-        }
-    }
-    if (error_gestion_map(p, x, o) == 84) return 84;
-    map_save(map, 0);
+    function_error(map, p, x, o);
     sokoban_game(map, x, o, big_line);
 }
 
