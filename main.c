@@ -28,10 +28,14 @@ int count_game(char *map, int p, int o, int x)
 {
     int big_line = 0;
     int line = 0;
-    int i = 0;
+    int size = my_strlen(map);
 
-    for (i = 0; map[i] != '\0'; i++){
+    for (int i = 0; map[i] != '\0'; i++){
         error_map_check(map[i], map);
+        if (big_line == 0 && map[i] == 'X'){
+            my_putstr_err("error map\n");
+            exit(84);
+        }
         if (map[i] == 'P')
             p++;
         else if (map[i] == 'X')
@@ -43,6 +47,12 @@ int count_game(char *map, int p, int o, int x)
                 big_line = line;
         } else
             line++;
+    }
+    for (int i = size - 2; map[i] != '\n'; i--){
+        if (map[i] == 'X'){
+            my_putstr_err("error map\n");
+            exit(84);
+        }
     }
     if (error_gestion_map(p, x, o) == 84) return 84;
     map_save(map, 0);
