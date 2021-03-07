@@ -18,6 +18,7 @@ char *read_map(char *filepath)
     char *buffer = NULL;
     int fd = open(filepath, O_RDONLY);
 
+    if (fd == -1) exit(84);
     stat(filepath, &sb);
     buffer = malloc((sb.st_size + 2) * sizeof(char));
     read(fd, buffer, sb.st_size);
