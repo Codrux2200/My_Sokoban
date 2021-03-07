@@ -43,8 +43,7 @@ int count_game(char *map, int p, int o, int x)
         if (map[i] == '\n') {
             if (big_line < line)
                 big_line = line;
-        } else
-            line++;
+        } else line++;
     }
     function_error(map, p, x, o);
     sokoban_game(map, x, o, big_line);
