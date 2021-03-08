@@ -10,8 +10,10 @@ int main(int ac, char **av)
 {
     char *map = NULL;
 
-    if (ac == 1)
+    if (ac == 1){
+        my_putstr_err("use -h command\n");
         return 84;
+    }
     if (av[1][0] == '-' && av[1][1] == 'h')
         print_describe();
     else {
