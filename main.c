@@ -61,9 +61,12 @@ void sokoban_game(char *map, int x, int o, int big_line)
         if (map[i] == '#' || map[i] == ' ')
             s = mini_function_s(map, line, s, i);
         else if (map[i] != '\n' && map[i] != '\0'){
-            if (map[i] == 'P') p_soko_gestion(soko_p, s, l);
-            else if (map[i] == 'O') o = mini_function_o(o, soko_o, s, l);
-            else if (map[i] == 'X') x = mini_function_x(x, soko_x, s, l);
+            if (map[i] == 'P') 
+                p_soko_gestion(soko_p, s, l);
+            else if (map[i] == 'O') 
+                o = mini_function_o(o, soko_o, s, l);
+            else if (map[i] == 'X') 
+                x = mini_function_x(x, soko_x, s, l);
             s = s_plus_function(line, s);
         } else {
             l = l_gestion(l, s, line, map_tab);
